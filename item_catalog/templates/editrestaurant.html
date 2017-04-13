@@ -1,0 +1,14 @@
+<html>
+<head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Edit Restaurant</h2>
+    <form action='/restaurant/{{ restaurant.id }}/edit' method='post'>
+        <p>Name:</p>
+        <input type='text' name='new_name' value='{{ restaurant.name }}'>
+        <input type='submit' value='Edit'>
+    </form>
+</body>
+</html>

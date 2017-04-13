@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<center>
+<h1>All the Restaurants</h1>
+</br>
+<h2>HI! {{ user }} | <a href='/gdisconnect'>Logout</a></h2>
+</br>
+</br>
+<a href='/restaurant/new'>Add a new restaurant</a>
+</br></br></br>
+{% for restaurant in restaurants %}
+    <a href="/restaurant/{{ restaurant.id }}/menu"><h1> {{ restaurant.name }} </h1></a>
+    <hr>
+    <hr>
+{% endfor %}
+</center>
+</body>
+</html>
